@@ -5,7 +5,7 @@ st = input('Insert time to count down (h:m:s) ')
 
 if len(st) == 8:
     if int(st.split(':')[0]) > 23:
-        raise Exception("Hour is too large. ENTER AN HOUR LESS THAN 24!!!")
+        raise  IndexError("Hour is too large. ENTER AN HOUR LESS THAN 24!!!")
 
     h, m, s = 0, 0, 0
     date_time_obj = datetime.datetime.strptime(st, '%H:%M:%S')
@@ -29,3 +29,7 @@ if len(st) == 8:
             break
 else:
     print('please write input with correct format (00:00:00)')
+
+
+
+
